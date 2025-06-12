@@ -1,4 +1,4 @@
-# Cross-Lingual Speech-Based Depression Detection using HuBERT
+# Layer-wise Cross-Lingual Depression Detection from Speech: A HuBERT-Based Study on English and Mandarin
 
 This repository contains the code and experiment pipeline for the bachelor's thesis project **“Cross-Lingual Speech-Based Depression Detection using HuBERT”** at the University of Groningen. The project investigates whether depression-related speech cues are transferable across languages using HuBERT representations.
 
