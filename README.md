@@ -12,26 +12,32 @@ Recent self-supervised speech models like HuBERT have demonstrated strong perfor
 - **Simple baseline classifier** (Logistic Regression)
 
 ## 🗂️ Project Structure
-HuBERT/
-├── datasets/                             # Segmented .wav files from CMDC & E-DAIC
-│   ├── cmdc_segments/
-│   └── edaic_segments/
-├── features_cmdc/                        # CMDC HuBERT features (e.g., X_train.npy, y_train.npy)
-├── features_edaic/                       # E-DAIC HuBERT features
-├── features_mix/                         # Mixed-language HuBERT features
-├── extract_cmdc_layer.py                # CMDC feature extraction script (layer parameterized)
-├── extract_edaic_layer.py               # E-DAIC feature extraction script (layer parameterized)
-├── extract_mix_layer.py                 # MIX feature extraction script (layer parameterized)
-├── run_cmdc_logistic_classifier.py      # Monolingual logistic regression for CMDC
-├── run_edaic_logistic_classifier.py     # Monolingual logistic regression for E-DAIC
-├── run_mix_logistic_classifier.py       # Monolingual logistic regression for MIX
-├── run_crosslingual_logistic.py         # Cross-lingual evaluation (EN→ZH, ZH→EN, MIX→EN/ZH)
-├── segment_cmdc_sliding.py              # CMDC preprocessing with 3s sliding window + downsampling
-├── segment_edaic_sliding.py             # E-DAIC preprocessing with 3s sliding window + downsampling
-├── build_mixed_metadata.py              # Sampled metadata for balanced MIX dataset
-├── utterance_table_cmdc_segmented_split.csv
-├── utterance_table_edaic_segmented_split.csv
-├── utterance_table_mix_segmented_split.csv
+```
+HuBERT_Depression_Detection/
+├── code/
+│   ├── classification/
+│   │   ├── run_cmdc_logistic_classifier.py
+│   │   ├── run_edaic_logistic_classifier.py
+│   │   └── run_mix_logistic_classifier.py
+│   ├── feature_extraction/
+│   │   ├── extract_cmdc_layer.py
+│   │   ├── extract_edaic_layer.py
+│   │   └── extract_mix_layer.py
+│   └── preprocessing/
+│       ├── balance_utterance_table.py
+│       ├── build_mixed_metadata.py
+│       ├── create_cmdc_balanced_table.py
+│       ├── create_cmdc_utterance_table.py
+│       ├── cut_edaic_utterances.py
+│       ├── segment_cmdc_sliding.py
+│       ├── segment_edaic_sliding.py
+│       └── split_metadata.py
+├── features/       
+├── log/              
+├── README.md
+└── .gitignore
+```
+
 
 ## 🔍 Datasets
 
@@ -83,7 +89,7 @@ HuBERT/
 
 If you use or reference this project, please cite:
 
-> Hang Chen (2025). *Cross-Lingual Speech-Based Depression Detection using HuBERT*. Master's Thesis, University of Groningen.
+> Hang Chen (2025). *Layer-wise Cross-Lingual Depression Detection from Speech: A HuBERT-Based Study on English and Mandarin*. Master's Thesis, University of Groningen.
 
 ## 🧠 Acknowledgments
 
@@ -92,4 +98,4 @@ If you use or reference this project, please cite:
 
 ---
 
-📬 For questions, contact: **h.chen.49@student.rug.nl**
+📬 For questions, contact: **hchen90408@gmail.com**
