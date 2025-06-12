@@ -75,9 +75,9 @@ HuBERT_Depression_Detection/
 
 | Model      | F1 (avg) | Accuracy | ROC-AUC |
 |------------|----------|----------|---------|
-| EN Layer 6 | 0.54     | 0.76     | 0.79    |
-| ZH Layer 6 | 0.66     | 0.72     | 0.74    |
-| MIX Layer 6| 0.67     | 0.76     | 0.78    |
+| EN Layer 6 | 0.74     | 0.803     | 0.883    |
+| ZH Layer 6 | 0.954     | 0.96     | 0.993    |
+| MIX Layer 6| 0.801     | 0.833     | 0.919    |
 
 ## 📁 Reproducibility
 
